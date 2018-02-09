@@ -11,8 +11,8 @@ public class ListToMapWithSupplier {
 		list.add(new Person(100, "Mohan"));
 		list.add(new Person(100, "Sohan"));
 		list.add(new Person(300, "Mahesh"));
-		LinkedHashMap<Integer, String> map = list.stream().collect(Collectors.toMap(Person::getId, Person::getName,
-				(x, y) -> x + ", " + y, LinkedHashMap::new));
+		LinkedHashMap<Integer, String> map = list.stream()
+				.collect(Collectors.toMap(Person::getId, Person::getName, (x, y) -> x + ", " + y, LinkedHashMap::new));
 		map.forEach((x, y) -> System.out.println("Key: " + x + ", value: " + y));
 	}
 }
