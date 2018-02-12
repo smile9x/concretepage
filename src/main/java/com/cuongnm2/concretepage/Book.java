@@ -1,15 +1,29 @@
 package com.cuongnm2.concretepage;
 
 public class Book {
+	private int id;
 	private String name;
 	private int price;
+
+	public Book(int id, String name) {
+		this.id = id;
+		this.name = name;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
 
 	public Book(String name, int price) {
 		this.name = name;
 		this.price = price;
 	}
-	
-	public Book(int price, String name) {
+
+	public Book(int id, int price, String name) {
 		this.name = name;
 		this.price = price;
 	}
@@ -20,6 +34,10 @@ public class Book {
 
 	public int getPrice() {
 		return price;
+	}
+
+	public void print() {
+		System.out.println("id:" + id + ", Name:" + name);
 	}
 
 	@Override
