@@ -5,6 +5,7 @@ public class Student implements Comparable<Student> {
 	private int id;
 	private String name;
 	private int age;
+	private String className;
 
 	public Student(int id, String name, int age) {
 		this.id = id;
@@ -12,6 +13,12 @@ public class Student implements Comparable<Student> {
 		this.age = age;
 	}
 
+	public Student(String name,Integer age, String className){
+        this.name=name;
+        this.age=age;
+        this.className = className;
+    }
+	
 	public int getId() {
 		return id;
 	}
@@ -22,6 +29,14 @@ public class Student implements Comparable<Student> {
 
 	public int getAge() {
 		return age;
+	}
+
+	public String getClassName() {
+		return className;
+	}
+
+	public void setClassName(String className) {
+		this.className = className;
 	}
 
 	@Override
